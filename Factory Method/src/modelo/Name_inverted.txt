@@ -1,0 +1,18 @@
+package modelo;
+
+public class Name_inverted extends Name{
+	
+	private String divide_nome[] = new String[1];
+
+	public Name_inverted(String nome, String sobrenome) {
+		super(nome, sobrenome);
+		divideName =  nome.split(", ");
+		this.nome = divide_nome[1];
+		this.sobrenome = divide_nome[0];
+	}
+
+	public String createName() {
+		return divideName[1] + " " + divideName[0];
+	}
+
+}
